@@ -38,8 +38,8 @@ var jsAutoComplete = function() {
 		if (start < 0) {
 			return [];
 		}
-		var potentials = options.slice(start, start + 100);
-		for (var i = 0; i < 100; i++) {
+		var potentials = options.slice(start, options.length);
+		for (var i = 0; i < potentials.length; i++) {
 			if (potentials[i].indexOf('*') > -1) {
 				results.push(potentials[i - 1]);
 				if (!potentials[i + 1].startsWith(input)) {
